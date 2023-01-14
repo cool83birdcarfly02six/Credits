@@ -57,6 +57,8 @@ local TextLabel_12 = Instance.new("TextLabel")
 local JuninhoScripts5 = Instance.new("ImageLabel")
 local UICorner_12 = Instance.new("UICorner")
 local TextLabel_13 = Instance.new("TextLabel")
+local close = Instance.new("ImageButton")
+local TextLabel_14 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -67,8 +69,8 @@ LIGHTUX.Name = "LIGHTUX"
 LIGHTUX.Parent = Credits
 LIGHTUX.BackgroundColor3 = Color3.fromRGB(11, 19, 31)
 LIGHTUX.BorderSizePixel = 0
-LIGHTUX.Position = UDim2.new(0.448407114, 0, 0.361935794, 0)
-LIGHTUX.Size = UDim2.new(0, 373, 0, 246)
+LIGHTUX.Position = UDim2.new(0.448407114, 0, 0.350824684, 0)
+LIGHTUX.Size = UDim2.new(0, 373, 0, 255)
 LIGHTUX.Active = true
 LIGHTUX.Draggable = true
 
@@ -101,7 +103,8 @@ ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Size = UDim2.new(0, 373, 0, 246)
+ScrollingFrame.Position = UDim2.new(0, 0, 0.0588235296, 0)
+ScrollingFrame.Size = UDim2.new(0, 373, 0, 240)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 6, 0)
 ScrollingFrame.ScrollBarThickness = 4
 
@@ -453,9 +456,32 @@ TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_13.TextSize = 14.000
 TextLabel_13.TextWrapped = true
 
+close.Name = "close"
+close.Parent = LIGHTUX
+close.BackgroundTransparency = 1.000
+close.LayoutOrder = 2
+close.Position = UDim2.new(0.918300629, 0, -0.00200802088, 0)
+close.Size = UDim2.new(0, 25, 0, 25)
+close.ZIndex = 2
+close.Image = "rbxassetid://3926305904"
+close.ImageRectOffset = Vector2.new(284, 4)
+close.ImageRectSize = Vector2.new(24, 24)
+
+TextLabel_14.Parent = LIGHTUX
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.Position = UDim2.new(0.0268096514, 0, 0, 0)
+TextLabel_14.Size = UDim2.new(0, 200, 0, 15)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = "Drag Here"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 14.000
+TextLabel_14.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_14.TextYAlignment = Enum.TextYAlignment.Top
+
 -- Scripts:
 
-local function UJRUMJ_fake_script() -- LIGHTUX.LocalScript 
+local function SXWRIB_fake_script() -- LIGHTUX.LocalScript 
 	local script = Instance.new('LocalScript', LIGHTUX)
 
 	local frame = script.Parent.Parent.LIGHTUX --in the .frame - you should need to change it what is your frame name.
@@ -480,4 +506,16 @@ local function UJRUMJ_fake_script() -- LIGHTUX.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UJRUMJ_fake_script)()
+coroutine.wrap(SXWRIB_fake_script)()
+local function SLKECOY_fake_script() -- close.LocalScript 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(SLKECOY_fake_script)()
